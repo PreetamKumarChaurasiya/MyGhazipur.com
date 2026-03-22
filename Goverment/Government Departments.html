@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Departments</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 10px 20px;
+    background: #eee;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Box */
+.box {
+    background: #ddd;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    background: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header/header.html"></div>
+
+<div class="breadcrumb">
+    <a href="index.html">Home</a> / Government Departments
+</div>
+
+<div class="container">
+
+<div class="box" onclick="go('Ghazipur-Nagarpalika.html')">Ghazipur Nagarpalika</div>
+<div class="box" onclick="go('postoffice.html')">Post Office</div>
+<div class="box" onclick="go('animal.html')">Animals Adoption Centers</div>
+<div class="box" onclick="go('rto.html')">RTO Office</div>
+<div class="box" onclick="go('police.html')">Police Station</div>
+<div class="box" onclick="go('railway.html')">Railways Station</div>
+<div class="box" onclick="go('bsnl.html')">BSNL Office</div>
+<div class="box" onclick="go('lic.html')">LIC Office</div>
+<div class="box" onclick="go('pf.html')">PF Office</div>
+<div class="box" onclick="go('labour.html')">Labour Office</div>
+<div class="box" onclick="go('gidc.html')">GIDC</div>
+<div class="box" onclick="go('bus.html')">Bus Stand</div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+
+function includeHTML(id, url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            // copy any style blocks from included file so CSS rules apply
+            doc.querySelectorAll('style').forEach(style => {
+                if (!document.head.querySelector(`style:contains('${style.textContent.slice(0,20)}')`)) {
+                    document.head.insertAdjacentHTML('beforeend', style.outerHTML);
+                }
+            });
+
+            document.getElementById(id).innerHTML = doc.body.innerHTML;
+        })
+        .catch(err => console.warn('Include failed for ' + url, err));
+}
+
+includeHTML('header-placeholder', '../header.html');
+includeHTML('footer-placeholder', '../footer.html');
+</script>
+
+</body>
+</html>

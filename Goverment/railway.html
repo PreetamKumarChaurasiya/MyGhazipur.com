@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vapi Nagarpalika</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: #1f3a56;
+    color: #fff;
+    padding: 8px 5%;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* MAIN HEADER */
+.header {
+    background: #167ea0;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: orange;
+}
+
+/* SEARCH */
+.search-box {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+.header-btns button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.post-btn {
+    background: #ff6b2c;
+    color: #fff;
+}
+
+.free-btn {
+    background: #2eccb0;
+    color: #fff;
+}
+
+.login-btn {
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 10px 20px;
+    background: #eee;
+}
+
+/* Layout */
+.main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* LEFT CONTENT */
+.content {
+    flex: 3;
+}
+
+/* RIGHT SIDEBAR */
+.sidebar {
+    flex: 1;
+}
+
+/* CARD */
+.card {
+    display: flex;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.card img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.details {
+    padding: 15px;
+}
+
+.details h2 {
+    margin: 0;
+}
+
+/* SIDEBAR */
+.sidebar h3 {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.sidebar div {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-left: 4px solid #007bff;
+}
+
+/* FOOTER */
+.footer {
+    background: #177ca6;
+    color: #fff;
+    padding: 40px 5%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-link {
+    background: #2a8db5;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    background: #1f6f90;
+}
+
+.subscribe-title {
+    margin-bottom: 10px;
+}
+
+.subscribe-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.subscribe-box input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 70%;
+    border-radius: 3px 0 0 3px;
+}
+
+.subscribe-box button {
+    background: #ff5a1f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social span {
+    background: #2a8db5;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    background: #126d92;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <a href="#">Events</a>
+    <a href="#">Vapi</a>
+    <a href="#">Education Links</a>
+    <a href="#">Advertise With Us</a>
+</div>
+
+<!-- MAIN HEADER -->
+<div class="header">
+    <div class="logo">My<span>Ghazipur</span>.com</div>
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button>🔍</button>
+    </div>
+    <div class="header-btns">
+        <button class="post-btn">Post Your Need</button>
+        <button class="free-btn">Free Listing</button>
+        <button class="login-btn">👤 Signin/Signup</button>
+    </div>
+</div>
+
+<div class="breadcrumb">
+    Home / Government Departments / Vapi Nagarpalika
+</div>
+
+<div class="main">
+
+<!-- LEFT -->
+<div class="content">
+
+<div class="card">
+    <img src="https://picsum.photos/300/200?1">
+    <div class="details">
+        <h2>Vapi Municipality</h2>
+        <p>Desaiwad Road, Behind Police Station, Vapi - 396191</p>
+        <p>📞 0260-2462803</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://picsum.photos/300/200?2">
+    <div class="details">
+        <h2>Sunrise Packers & Movers</h2>
+        <p>MRH Compound, Opp Cine Park</p>
+        <p>📞 8094160037</p>
+    </div>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div class="sidebar">
+
+<h3>Government Departments</h3>
+
+<div onclick="go('Ghazipur-Nagarpalika.html')">Vapi Nagarpalika</div>
+<div onclick="go('postoffice.html')">Post Office</div>
+<div onclick="go('animal.html')">Animals Adoption Centers</div>
+<div onclick="go('rto.html')">RTO Office</div>
+<div onclick="go('police.html')">Police Station</div>
+<div onclick="go('railway.html')">Railways Station</div>
+<div onclick="go('bsnl.html')">BSNL Office</div>
+<div onclick="go('lic.html')">LIC Office</div>
+<div onclick="go('pf.html')">PF Office</div>
+<div onclick="go('labour.html')">Labour Office</div>
+<div onclick="go('gidc.html')">GIDC</div>
+<div onclick="go('bus.html')">Bus Stand</div>
+
+</div>
+
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Advertise With Us</a>
+                <a href="#" class="footer-link">Free! Add Your Business</a>
+                <a href="#" class="footer-link">Contact Us</a>
+                <a href="#" class="footer-link">Feedback</a>
+                <a href="#" class="footer-link">Free! QR Code Generator</a>
+                <a href="#" class="footer-link">Poster Maker Tool</a>
+            </div>
+            <div class="footer-col">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Disclaimer</a>
+                <a href="#" class="footer-link">Terms & Conditions</a>
+                <a href="#" class="footer-link">Cookies Policy</a>
+                <a href="#" class="footer-link">Sitemap</a>
+            </div>
+            <div class="footer-col">
+                <p class="subscribe-title">Join Now For Latest News, Offers & Discounts.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter Email">
+                    <button>Join</button>
+                </div>
+                <div class="social">
+                    <span>📘</span>
+                    <span>🐦</span>
+                    <span>📌</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">Copyright © 2015 - 2026 MyGhazipur.com . All Rights Reserved</div>
+</footer>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>

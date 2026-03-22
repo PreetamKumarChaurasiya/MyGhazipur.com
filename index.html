@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Directory</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: #1f3a56;
+    color: #fff;
+    padding: 8px 5%;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* MAIN HEADER */
+.header {
+    background: #167ea0;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: orange;
+}
+
+/* SEARCH */
+.search-box {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+.header-btns button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.post-btn {
+    background: #ff6b2c;
+    color: #fff;
+}
+
+.free-btn {
+    background: #2eccb0;
+    color: #fff;
+}
+
+.login-btn {
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* TITLE */
+.card h3 {
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* SUB LINKS */
+.links {
+    padding: 0 10px 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.links span {
+    display: inline-block;
+    margin-right: 6px;
+    background: #eee;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+.footer {
+    background: #177ca6;
+    color: #fff;
+    padding: 40px 5%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-link {
+    background: #2a8db5;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    background: #1f6f90;
+}
+
+.subscribe-title {
+    margin-bottom: 10px;
+}
+
+.subscribe-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.subscribe-box input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 70%;
+    border-radius: 3px 0 0 3px;
+}
+
+.subscribe-box button {
+    background: #ff5a1f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social span {
+    background: #2a8db5;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    background: #126d92;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <a href="Events.html">Events</a>
+    <a href="header/Ghazipur.html">Ghazipur</a>
+    <a href="Education Links.html">Education Links</a>
+    <a href="Advertise With Us.html">Advertise With Us</a>
+    <a href="header/Developer.html">Developer</a>
+</div>
+
+<!-- MAIN HEADER -->
+<div class="header">
+
+    <!-- LOGO -->
+    <div class="logo">My<span>Ghazipur</span>.com</div>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button>🔍</button>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="header-btns">
+        <button class="post-btn">Post Your Need</button>
+        <button class="free-btn">Free Listing</button>
+        <button class="login-btn">👤 Signin/Signup</button>
+    </div>
+
+</div>
+
+<div class="container">
+
+<!-- CARD -->
+<div class="card" onclick="goPage('Goverment/Government Departments.html')">
+    <img src="img/Govt Logo.png">
+    <h3>Government Department</h3>
+    <div class="links">
+        <span>Post Office</span>
+        <span>Municipality</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('jobs.html')">
+    <img src="img/Jobs.png">
+    <h3>Jobs</h3>
+    <div class="links">
+        <span>Consultancy</span>
+        <span>Placement</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('hospital.html')">
+    <img src="img/Hospital.jpg">
+    <h3>Hospitals</h3>
+    <div class="links">
+        <span>Dental</span>
+        <span>Eye</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('shopping.html')">
+    <img src="img/shoping store.webp">
+    <h3>Shopping Store</h3>
+    <div class="links">
+        <span>Men</span>
+        <span>Women</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('electronics.html')">
+    <img src="img/electronics.jpg">
+    <h3>Electronics</h3>
+    <div class="links">
+        <span>TV</span>
+        <span>Mobile</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('education.html')">
+    <img src="img/educations.jpg">
+    <h3>Education</h3>
+    <div class="links">
+        <span>College</span>
+        <span>School</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('food.html')">
+    <img src="img/foods.jpg">
+    <h3>Food & Grocery</h3>
+    <div class="links">
+        <span>Pizza</span>
+        <span>Bakery</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('bank.html')">
+    <img src="img/bank.jpg">
+    <h3>Bank</h3>
+    <div class="links">
+        <span>SBI</span>
+        <span>ICICI</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('realestate.html')">
+    <img src="img/real states.jpg   ">
+    <h3>Real Estate</h3>
+    <div class="links">
+        <span>Agents</span>
+        <span>Builders</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('travel.html')">
+    <img src="img/toors and travels.jpg">
+    <h3>Tours & Travels</h3>
+    <div class="links">
+        <span>Bus</span>
+        <span>Flight</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('repair.html')">
+    <img src="img/Repairing shop.jpg">
+    <h3>Repairs</h3>
+    <div class="links">
+        <span>Mobile</span>
+        <span>Laptop</span>
+    </div>
+</div>
+
+<div class="card" onclick="goPage('services.html')">
+    <img src="https://picsum.photos/300/200?12">
+    <h3>On Demand Services</h3>
+    <div class="links">
+        <span>Electrician</span>
+        <span>Cleaning</span>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Advertise With Us</a>
+                <a href="#" class="footer-link">Free! Add Your Business</a>
+                <a href="#" class="footer-link">Contact Us</a>
+                <a href="#" class="footer-link">Feedback</a>
+                <a href="#" class="footer-link">Free! QR Code Generator</a>
+                <a href="#" class="footer-link">Poster Maker Tool</a>
+            </div>
+            <div class="footer-col">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Disclaimer</a>
+                <a href="#" class="footer-link">Terms & Conditions</a>
+                <a href="#" class="footer-link">Cookies Policy</a>
+                <a href="#" class="footer-link">Sitemap</a>
+            </div>
+            <div class="footer-col">
+                <p class="subscribe-title">Join Now For Latest News, Offers & Discounts.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter Email">
+                    <button>Join</button>
+                </div>
+                <div class="social">
+                    <span>📘</span>
+                    <span>🐦</span>
+                    <span>📌</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">Copyright © 2015 - 2026 MyGhazipur.com . All Rights Reserved</div>
+</footer>
+
+<script>
+function goPage(page){
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
